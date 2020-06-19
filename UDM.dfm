@@ -53,6 +53,7 @@ object DM: TDM
     end
   end
   object FDQClienteAll: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from cliente'
@@ -91,6 +92,7 @@ object DM: TDM
     end
   end
   object FDQCliente: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from cliente'
@@ -136,6 +138,7 @@ object DM: TDM
     end
   end
   object FDQPontuacao: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from pontuacao')
@@ -161,6 +164,7 @@ object DM: TDM
     end
   end
   object FDQSomaPontos: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       
@@ -185,6 +189,7 @@ object DM: TDM
     end
   end
   object FDQPontuacaoZera: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from pontuacao where pontuacao_id_cliente =:idcliente')
@@ -214,6 +219,35 @@ object DM: TDM
     object FDQPontuacaoZerapontuacao_data: TDateField
       FieldName = 'pontuacao_data'
       Origin = 'pontuacao_data'
+    end
+  end
+  object FDQPontuacaoOrderbyDesc: TFDQuery
+    Active = True
+    Connection = FDConnection1
+    SQL.Strings = (
+      
+        'select cliente_id, cliente_nome, coalesce(sum(pontuacao_pontos),' +
+        '0) as pontuacao from cliente c'
+      'inner join pontuacao p on c.cliente_id = p.pontuacao_id_cliente'
+      'group by cliente_id')
+    Left = 359
+    Top = 88
+    object FDQPontuacaoOrderbyDesccliente_id: TFDAutoIncField
+      FieldName = 'cliente_id'
+      Origin = 'cliente_id'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object FDQPontuacaoOrderbyDesccliente_nome: TStringField
+      FieldName = 'cliente_nome'
+      Origin = 'cliente_nome'
+      Size = 60
+    end
+    object FDQPontuacaoOrderbyDescpontuacao: TLargeintField
+      AutoGenerateValue = arDefault
+      FieldName = 'pontuacao'
+      Origin = 'pontuacao'
+      ProviderFlags = []
+      ReadOnly = True
     end
   end
 end

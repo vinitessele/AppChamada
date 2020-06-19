@@ -50,6 +50,9 @@ type
     RESTClient1: TRESTClient;
     RESTRequest1: TRESTRequest;
     RESTResponse1: TRESTResponse;
+    RectRelatorio: TRectangle;
+    BntRelatorio: TButton;
+    Circle4: TCircle;
     procedure FormCreate(Sender: TObject);
     procedure btnInfClick(Sender: TObject);
     procedure btnConfiguracaoClick(Sender: TObject);
@@ -76,7 +79,8 @@ implementation
 
 {$R *.fmx}
 
-uses uOpenViewUrl, USobre, UDM, UCadClientes, UConfiguracao, ULancamento;
+uses uOpenViewUrl, USobre, UDM, UCadClientes, UConfiguracao, ULancamento,
+  URelatorio;
 {$R *.LgXhdpiPh.fmx ANDROID}
 {$R *.XLgXhdpiTb.fmx ANDROID}
 
@@ -152,9 +156,9 @@ end;
 
 procedure TFPrincipal.btnConfiguracaoClick(Sender: TObject);
 begin
-  if not Assigned(FConfiguracao) then
-    FConfiguracao := TFConfiguracao.Create(nil);
-  FConfiguracao.ShowModal(
+  if not Assigned(FRelatorio) then
+    FRelatorio := TFRelatorio.Create(nil);
+  FRelatorio.ShowModal(
     procedure(ModalResult: TModalResult)
     begin
 
@@ -187,7 +191,7 @@ procedure TFPrincipal.FormCreate(Sender: TObject);
 var
   vFoto: TStream;
 begin
-  versao_app := '1,40';
+  versao_app := '1,50';
   versao_server := '0.0';
   LabelVersao.Text := 'Versão ' + versao_app;
   LayoutUpdate.Margins.Top := FPrincipal.Height + 50;

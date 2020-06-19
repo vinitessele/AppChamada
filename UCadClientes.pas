@@ -50,6 +50,7 @@ type
       const AItem: TListViewItem);
     procedure ActionPhotoLibraryDidFinishTaking(Image: TBitmap);
     procedure FormActivate(Sender: TObject);
+    procedure TabItem1Click(Sender: TObject);
   private
     { Private declarations }
 {$IFDEF ANDROID}
@@ -166,6 +167,9 @@ begin
   dm.FDQClienteAll.Active := True;
   dm.FDQClienteAll.Close;
   dm.FDQClienteAll.Open();
+
+  TabItem2.Enabled := False;
+  TabControl1.TabIndex := 0;
 end;
 
 procedure TFCadCliente.ListViewClienteDeleteItem(Sender: TObject;
@@ -209,6 +213,13 @@ begin
 {$IFDEF IOS}
   ActionPhotoLibrary.Execute;
 {$ENDIF}
+end;
+
+procedure TFCadCliente.TabItem1Click(Sender: TObject);
+begin
+  inherited;
+  TabItem2.Enabled := False;
+  TabControl1.TabIndex := 0;
 end;
 
 end.

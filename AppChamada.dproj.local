@@ -6,8 +6,8 @@
     <Transaction>2020/01/29 15:27:05.000.706,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\UPrincipal.fmx=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
     <Transaction>2020/01/29 15:27:12.000.232,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\AppChamada.dproj=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
     <Transaction>2020/01/29 16:15:04.000.500,=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\Unit1.pas</Transaction>
-    <Transaction>2020/01/29 16:15:13.000.287,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\UDM.dfm=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\Unit1.dfm</Transaction>
     <Transaction>2020/01/29 16:15:13.000.287,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\UDM.pas=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\Unit1.pas</Transaction>
+    <Transaction>2020/01/29 16:15:13.000.287,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\UDM.dfm=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\Unit1.dfm</Transaction>
     <Transaction>2020/02/07 21:11:29.000.469,=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\UModelo.pas</Transaction>
     <Transaction>2020/02/07 21:11:30.000.839,=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\uOpenViewUrl.pas</Transaction>
     <Transaction>2020/02/07 21:11:31.000.059,=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\USobre.pas</Transaction>
@@ -17,6 +17,9 @@
     <Transaction>2020/02/07 21:31:20.000.407,=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\Unit1.pas</Transaction>
     <Transaction>2020/02/07 21:31:50.000.106,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\Unit1.pas=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\ULancamento.pas</Transaction>
     <Transaction>2020/02/07 21:31:50.000.106,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\Unit1.fmx=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\ULancamento.fmx</Transaction>
+    <Transaction>2020/06/19 00:20:34.824,=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\Unit1.pas</Transaction>
+    <Transaction>2020/06/19 00:21:18.997,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\URelatorio.fmx=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\Unit1.fmx</Transaction>
+    <Transaction>2020/06/19 00:21:18.997,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\URelatorio.pas=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\Unit1.pas</Transaction>
   </Transactions>
 	<ActiveMobileDevice>
 		<NoProfile iOSSimulator="iPhone5" Android="RQ8M30LNNQB" Android64="RQ8M30LNNQB"/>

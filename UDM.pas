@@ -46,6 +46,10 @@ type
     FDQPontuacaoZerapontuacao_id_cliente: TIntegerField;
     FDQPontuacaoZerapontuacao_pontos: TIntegerField;
     FDQPontuacaoZerapontuacao_data: TDateField;
+    FDQPontuacaoOrderbyDesc: TFDQuery;
+    FDQPontuacaoOrderbyDesccliente_id: TFDAutoIncField;
+    FDQPontuacaoOrderbyDesccliente_nome: TStringField;
+    FDQPontuacaoOrderbyDescpontuacao: TLargeintField;
     procedure FDConnection1BeforeConnect(Sender: TObject);
     procedure FDConnection1AfterConnect(Sender: TObject);
   private
