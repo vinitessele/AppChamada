@@ -17,11 +17,11 @@
     <Transaction>2020/02/07 21:31:20.000.407,=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\Unit1.pas</Transaction>
     <Transaction>2020/02/07 21:31:50.000.106,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\Unit1.pas=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\ULancamento.pas</Transaction>
     <Transaction>2020/02/07 21:31:50.000.106,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\Unit1.fmx=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\ULancamento.fmx</Transaction>
-    <Transaction>2020/06/19 00:20:34.824,=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\Unit1.pas</Transaction>
-    <Transaction>2020/06/19 00:21:18.997,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\URelatorio.fmx=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\Unit1.fmx</Transaction>
-    <Transaction>2020/06/19 00:21:18.997,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\URelatorio.pas=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\Unit1.pas</Transaction>
+    <Transaction>2020/06/19 00:20:34.000.824,=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\Unit1.pas</Transaction>
+    <Transaction>2020/06/19 00:21:18.000.997,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\URelatorio.fmx=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\Unit1.fmx</Transaction>
+    <Transaction>2020/06/19 00:21:18.000.997,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\URelatorio.pas=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\AppChamada\Unit1.pas</Transaction>
   </Transactions>
 	<ActiveMobileDevice>
-		<NoProfile iOSSimulator="iPhone5" Android="RQ8M30LNNQB" Android64="RQ8M30LNNQB"/>
+		<NoProfile iOSSimulator="iPhone5" Android="RQ8M30LNNQB" Android64=""/>
 	</ActiveMobileDevice>
 </BorlandProject>

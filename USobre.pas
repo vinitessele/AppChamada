@@ -14,7 +14,7 @@ type
     Label1: TLabel;
     Label2: TLabel;
     Image1: TImage;
-    Rectangle1: TRectangle;
+    RectRodape: TRectangle;
     btnFechar: TSpeedButton;
     procedure btnFecharClick(Sender: TObject);
   private

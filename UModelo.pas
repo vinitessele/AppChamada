@@ -3,7 +3,8 @@ unit UModelo;
 interface
 
 uses
-  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  System.SysUtils, System.Types, System.UITypes, System.Classes,
+  System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
   FMX.Controls.Presentation, FMX.Objects, FMX.Layouts;
 
@@ -13,12 +14,13 @@ type
     bntMenu: TSpeedButton;
     LabelMenu: TLabel;
     btnInf: TSpeedButton;
-    Rectangle1: TRectangle;
+    RectRodape: TRectangle;
     Image1: TImage;
-    Layout1: TLayout;
+    LayoutCabecalho: TLayout;
     LabelMenuModelo: TLabel;
     VertScrollBox1: TVertScrollBox;
     procedure bntMenuClick(Sender: TObject);
+    procedure btnInfClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -32,9 +34,24 @@ implementation
 
 {$R *.fmx}
 
+uses USobre;
+
 procedure TFModelo.bntMenuClick(Sender: TObject);
 begin
-close;
+  close;
+end;
+
+procedure TFModelo.btnInfClick(Sender: TObject);
+begin
+  if not Assigned(FSobre) then
+    FSobre := TFSobre.Create(nil);
+  FSobre.ShowModal(
+    procedure(ModalResult: TModalResult)
+    begin
+      sleep(500);
+      FSobre := nil;
+      FSobre.disposeof;
+    end);
 end;
 
 end.

@@ -19,7 +19,5 @@ begin
   Application.Initialize;
   Application.CreateForm(TDM, DM);
   Application.CreateForm(TFPrincipal, FPrincipal);
-  Application.CreateForm(TFLancamento, FLancamento);
-  Application.CreateForm(TFRelatorio, FRelatorio);
   Application.Run;
 end.

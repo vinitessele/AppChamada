@@ -17,7 +17,6 @@ object DM: TDM
     Top = 16
   end
   object FDQParametro: TFDQuery
-    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from parametro')
@@ -53,7 +52,6 @@ object DM: TDM
     end
   end
   object FDQClienteAll: TFDQuery
-    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from cliente'
@@ -92,7 +90,6 @@ object DM: TDM
     end
   end
   object FDQCliente: TFDQuery
-    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from cliente'
@@ -138,7 +135,6 @@ object DM: TDM
     end
   end
   object FDQPontuacao: TFDQuery
-    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from pontuacao')
@@ -164,7 +160,6 @@ object DM: TDM
     end
   end
   object FDQSomaPontos: TFDQuery
-    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       
@@ -189,7 +184,6 @@ object DM: TDM
     end
   end
   object FDQPontuacaoZera: TFDQuery
-    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from pontuacao where pontuacao_id_cliente =:idcliente')
@@ -236,6 +230,7 @@ object DM: TDM
       FieldName = 'cliente_id'
       Origin = 'cliente_id'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object FDQPontuacaoOrderbyDesccliente_nome: TStringField
       FieldName = 'cliente_nome'

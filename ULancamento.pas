@@ -51,6 +51,7 @@ type
     procedure btnBuscaClick(Sender: TObject);
     procedure ListViewNomeItemClick(const Sender: TObject;
       const AItem: TListViewItem);
+    procedure bntMenuClick(Sender: TObject);
   private
     procedure VisibleEstrela;
     { Private declarations }
@@ -74,10 +75,16 @@ uses UDM, UCadClientes
 {$ENDIF ANDROID}
     ;
 
+procedure TFLancamento.bntMenuClick(Sender: TObject);
+begin
+  close;
+  inherited;
+end;
+
 procedure TFLancamento.btnBuscaClick(Sender: TObject);
 begin
   inherited;
-  dm.FDQCliente.Close;
+  dm.FDQCliente.close;
   dm.FDQCliente.ParamByName('nome').AsString := '%' + EditNome.Text + '%';
   dm.FDQCliente.Open();
 end;
@@ -101,8 +108,18 @@ end;
 
 procedure TFLancamento.ListViewNomeItemClick(const Sender: TObject;
   const AItem: TListViewItem);
+var
+  vFoto: TStream;
 begin
   inherited;
+  LabelCliente2.Text := dm.FDQClientecliente_nome.AsString;
+  Labelcelular2.Text := dm.FDQClientecliente_celular.AsString;
+  vFoto := dm.FDQCliente.CreateBlobStream
+    (dm.FDQCliente.FieldByName('cliente_img'), bmRead);
+  if not dm.FDQClientecliente_img.IsNull then
+  begin
+    CircleFotoCliente2.Fill.Bitmap.Bitmap.LoadFromStream(vFoto);
+  end;
   imgEstrela1.Visible := false;
   imgEstrela2.Visible := false;
   imgEstrela3.Visible := false;
@@ -119,20 +136,12 @@ end;
 
 procedure TFLancamento.VarificaPontos;
 var
-  vFoto: TStream;
   sql: string;
 begin
-  LabelCliente2.Text := dm.FDQClientecliente_nome.AsString;
-  Labelcelular2.Text := dm.FDQClientecliente_celular.AsString;
-  vFoto := dm.FDQCliente.CreateBlobStream
-    (dm.FDQCliente.FieldByName('cliente_img'), bmRead);
-  if not dm.FDQClientecliente_img.IsNull then
-  begin
-    CircleFotoCliente2.Fill.Bitmap.Bitmap.LoadFromStream(vFoto);
-  end;
+
   if dm.FDQClientecliente_id.AsString <> EmptyStr then
   begin
-    dm.FDQSomaPontos.Close;
+    dm.FDQSomaPontos.close;
     dm.FDQSomaPontos.ParamByName('idCliente').AsString :=
       dm.FDQClientecliente_id.AsString;
     dm.FDQSomaPontos.Open;

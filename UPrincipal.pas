@@ -64,6 +64,7 @@ type
     procedure btnAtualizarMouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Single);
     procedure FormShow(Sender: TObject);
+    procedure BntRelatorioClick(Sender: TObject);
   private
     { Private declarations }
     versao_app, versao_server: string;
@@ -118,6 +119,19 @@ begin
   end;
 end;
 
+procedure TFPrincipal.BntRelatorioClick(Sender: TObject);
+begin
+  if not Assigned(FRelatorio) then
+    FRelatorio := TFRelatorio.Create(nil);
+  FRelatorio.ShowModal(
+    procedure(ModalResult: TModalResult)
+    begin
+      sleep(500);
+      FRelatorio := nil;
+      FRelatorio.disposeof;
+    end);
+end;
+
 procedure TFPrincipal.btnAtualizarClick(Sender: TObject);
 var
   url: string;
@@ -132,13 +146,13 @@ begin
 end;
 
 procedure TFPrincipal.btnAtualizarMouseDown(Sender: TObject;
-  Button: TMouseButton; Shift: TShiftState; X, Y: Single);
+Button: TMouseButton; Shift: TShiftState; X, Y: Single);
 begin
   rect_botao.Opacity := 0.5;
 end;
 
 procedure TFPrincipal.btnAtualizarMouseUp(Sender: TObject; Button: TMouseButton;
-  Shift: TShiftState; X, Y: Single);
+Shift: TShiftState; X, Y: Single);
 begin
   rect_botao.Opacity := 1;
 end;
@@ -150,18 +164,22 @@ begin
   FCadCliente.ShowModal(
     procedure(ModalResult: TModalResult)
     begin
-
+      sleep(500);
+      FCadCliente := nil;
+      FCadCliente.disposeof;
     end);
 end;
 
 procedure TFPrincipal.btnConfiguracaoClick(Sender: TObject);
 begin
-  if not Assigned(FRelatorio) then
-    FRelatorio := TFRelatorio.Create(nil);
-  FRelatorio.ShowModal(
+  if not Assigned(FConfiguracao) then
+    FConfiguracao := TFConfiguracao.Create(nil);
+  FConfiguracao.ShowModal(
     procedure(ModalResult: TModalResult)
     begin
-
+      sleep(500);
+      FConfiguracao := nil;
+      FConfiguracao.disposeof;
     end);
 end;
 
@@ -172,7 +190,9 @@ begin
   FSobre.ShowModal(
     procedure(ModalResult: TModalResult)
     begin
-
+      sleep(500);
+      FSobre := nil;
+      FSobre.disposeof;
     end);
 end;
 
@@ -183,7 +203,9 @@ begin
   FLancamento.ShowModal(
     procedure(ModalResult: TModalResult)
     begin
-
+      sleep(500);
+      FLancamento := nil;
+      FLancamento.disposeof;
     end);
 end;
 
@@ -215,7 +237,7 @@ begin
     var
       JsonObj: TJSONObject;
     begin
-      Sleep(2000);
+      sleep(2000);
       try
         RESTRequest1.Execute;
       except
@@ -231,7 +253,7 @@ begin
 
         versao_server := TJSONObject(JsonObj).GetValue('Versao').Value;
       finally
-        JsonObj.DisposeOf;
+        JsonObj.disposeof;
       end;
     end);
   t.OnTerminate := OnFinishUpdate;

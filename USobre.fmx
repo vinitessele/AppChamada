@@ -1,7 +1,7 @@
 object FSobre: TFSobre
   Left = 0
   Top = 0
-  Caption = 'Form1'
+  Caption = 'Sobre'
   ClientHeight = 480
   ClientWidth = 360
   Fill.Kind = Solid
@@ -2570,7 +2570,7 @@ object FSobre: TFSobre
       Size.Height = 97.000000000000000000
       Size.PlatformDefault = False
     end
-    object Rectangle1: TRectangle
+    object RectRodape: TRectangle
       Align = Bottom
       Margins.Left = 2.000000000000000000
       Margins.Top = 2.000000000000000000
