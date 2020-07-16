@@ -213,7 +213,7 @@ procedure TFPrincipal.FormCreate(Sender: TObject);
 var
   vFoto: TStream;
 begin
-  versao_app := '1,50';
+  versao_app := '1,70';
   versao_server := '0.0';
   LabelVersao.Text := 'Versão ' + versao_app;
   LayoutUpdate.Margins.Top := FPrincipal.Height + 50;

@@ -91,6 +91,7 @@ begin
       TStyledSetting.FontColor, TStyledSetting.Style];
     TextSettings.FontColor := $FF333333;
     Text := nome;
+    Width := 300;
     font.Size := 12;
     font.Style := [TFontStyle.fsBold];
     Position.X := 50;
